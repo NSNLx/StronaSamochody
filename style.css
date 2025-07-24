@@ -1,0 +1,510 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: orange;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    background-color: #ccc;
+    margin: 20px auto;
+    width: 84%;
+    min-height: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.dark-mode {
+    background-color: #222; 
+    color: white;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #111;
+    color: white; 
+}
+
+.dark-mode nav ul {
+    background-color: #000; 
+}
+
+.dark-mode main {
+    background-color: #333; 
+    color: white; 
+}
+
+.dark-mode .form-container {
+    background: #333;
+    color: white; }
+
+.dark-mode .form input {
+    background: #444; 
+    color: white; 
+    border: 1px solid #555; 
+}
+
+.dark-mode .form button {
+    background: darkorange; 
+    color: white; 
+}
+
+.dark-mode .tab-buttons label {
+    background: #444; 
+    color: white; 
+}
+
+.dark-mode .ogloszenie {
+    background-color: #444; 
+    color: white;
+    border: 1px solid #555; 
+}
+#toggle-theme {
+    background: orange;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#toggle-theme:hover {
+    background: darkorange;
+}
+
+.user-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-container {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+input[name="tab"] {
+    display: none;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.tab-buttons label {
+    padding: 10px;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+#login-tab:checked ~ .tab-buttons label[for="login-tab"],
+#register-tab:checked ~ .tab-buttons label[for="register-tab"] {
+    background: orange;
+    color: white;
+}
+
+.form {
+    display: none;
+}
+
+#login-tab:checked ~ #login-form,
+#register-tab:checked ~ #register-form {
+    display: block;
+}
+
+.form input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: darkorange;
+}
+
+.dark-mode .form-container {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .form input {
+    background: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+.dark-mode .form button {
+    background: darkorange;
+}
+
+.dark-mode .tab-buttons label {
+    background: #555;
+    color: white;
+}
+
+.ogloszenia-container {
+    max-height: 700px;
+    overflow-y: auto; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.ogloszenie {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    text-align: left; 
+}
+
+.ogloszenie img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.logo-black {
+    color: white;
+}
+
+.logo-orange {
+    color: orange;
+    background-color: black;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+.kontakt-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: darkorange;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.kontakt-container p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.dark-mode .about-section {
+    background-color: #444;
+    color: white; 
+    border: 1px solid #555;
+}
+.dark-mode .kontakt-container {
+    background-color: #444;
+    color: white; 
+    border: 1px solid #555; 
+}
+.dark-mode .kontakt-container p {
+    color: white;
+}
+.about-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-section p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+.dark-mode .dodaj-ogloszenie-form{
+    background-color: #444;
+    color: white; 
+    border: 1px solid #555;
+}
+.dodaj-ogloszenie-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dodaj-ogloszenie-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dodaj-ogloszenie-form input,
+.dodaj-ogloszenie-form textarea,
+.dodaj-ogloszenie-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.dodaj-ogloszenie-form button {
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dodaj-ogloszenie-form button:hover {
+    background-color: darkorange;
+}
+.panel-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.panel-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.panel-button:hover {
+    background-color: darkorange;
+}
+.edit-button, .delete-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.ogloszenie {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ogloszenie h3 {
+    margin: 0 0 10px;
+}
+
+.ogloszenie p {
+    margin: 5px 0;
+}
+
+.edit-button, .delete-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+#admin-tab:checked ~ .tab-buttons label[for="admin-tab"] {
+    background: orange;
+    color: white;
+}
+
+#admin-tab:checked ~ #admin-form {
+    display: block;
+}
+.uzytkownicy-container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.admin-panel-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px;
+}
+
+.admin-section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h3 {
+    text-align: center;
+}
+
+.ogloszenia-container, .uzytkownicy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ogloszenie, .uzytkownik {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ogloszenie button, .uzytkownik button {
+    margin-top: 10px;
+    padding: 10px;
+
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ogloszenie button:hover, .uzytkownik button:hover {
+    background-color: #d32f2f;}
+.dark-mode .uzytkownik{
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .admin-section{
+    background-color: #4f4f4f;
+    color: white; 
+    border: 1px solid #555; 
+}
